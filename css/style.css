@@ -1,0 +1,73 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: -apple-system, system-ui, sans-serif;
+}
+
+#camera-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+  display: block;
+}
+
+#result-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+}
+
+#shutter-btn {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid rgba(255, 255, 255, 0.45);
+}
+
+#shutter-btn:active {
+  background: #ddd;
+}
+
+#switch-btn, #gallery-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: none;
+  font-size: 18px;
+}
+
+#status {
+  position: absolute;
+  top: calc(12px + env(safe-area-inset-top));
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+}
